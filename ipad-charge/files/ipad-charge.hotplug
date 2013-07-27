@@ -4,7 +4,12 @@ VENDOR_APPLE='5ac/12[9a][0-9ab]/[0-9][a-f]\+'
 IPAD_CHARGE='/usr/sbin/ipad_charge'
 
 if [ $(expr match "${PRODUCT}" ${VENDOR_APPLE}" = $(expr length "${PRODUCT}") ]; then
-	if [ "${ACTION}" = "add" ]; then
-		${IPAD_CHARGE}
-	fi
+    case "${ACTION}" in
+	add)
+	    ${IPAD_CHARGE}
+	    ;;
+	remove)
+	    ${IPAD_CHARGE} --off
+	    ;;
+    esac
 fi
