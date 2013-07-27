@@ -1,0 +1,10 @@
+#!/bin/sh
+
+VENDOR_APPLE='05ac/12[9a][0-9ab]'
+IPAD_CHARGE='/usr/sbin/ipad_charge'
+
+if [ $(expr match "${PRODUCT}" ${VENDOR_APPLE}" = $(expr length "${PRODUCT}") ]; then
+	if [ "${ACTION}" = "add" ]; then
+		${IPAD_CHARGE}
+	fi
+fi
