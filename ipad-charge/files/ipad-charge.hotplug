@@ -3,7 +3,7 @@
 VENDOR_APPLE='5ac/12[9a][0-9a-f]/[0-9a-f]\+'
 IPAD_CHARGE='/usr/sbin/ipad_charge'
 
-if [ $(expr match "${PRODUCT}" ${VENDOR_APPLE}" = $(expr length "${PRODUCT}") ]; then
+if [ $(expr match "${PRODUCT}" "${VENDOR_APPLE}") = $(expr length "${PRODUCT}") ]; then
     case "${ACTION}" in
 	add)
 	    ${IPAD_CHARGE}
