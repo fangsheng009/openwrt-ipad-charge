@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VENDOR_APPLE='5ac/12[9a][0-9ab]/[0-9][a-f]\+'
+VENDOR_APPLE='5ac/12[9a][0-9a-f]/[0-9a-f]\+'
 IPAD_CHARGE='/usr/sbin/ipad_charge'
 
 if [ $(expr match "${PRODUCT}" ${VENDOR_APPLE}" = $(expr length "${PRODUCT}") ]; then
